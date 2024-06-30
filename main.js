@@ -52,8 +52,7 @@ function play(){
 }else if(chances == 1){
   heartSpan.textContent=`♥`;
 }else{
-  heartSpan.textContent=``;
-  resultArea.textContent = "다음기회에 다시 도전하세요 ㅠㅠ";
+  heartSpan.textContent=`0`;
   gameOver = true;
 }
 
@@ -69,6 +68,7 @@ function play(){
   }
 
   if (gameOver == true){
+  resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`;
     goButton.disabled = true;
   }
   history.push(userValue);
