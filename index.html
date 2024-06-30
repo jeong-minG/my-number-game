@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY NUMBER GUESS GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="plaid-line">
+        <div class="interface">
+            <div class="top">
+                <p>＝</p>
+                <p>□</p>
+                <p>♥</p>
+            </div>
+            <div class="main">
+                <h1>NUMBER GUESSING GAME</h1>
+                <div id="result-area">5번의 기회 동안 숫자를 맞춰보세요!</div>
+                <div id="chance-area">남은 기회 : 
+                    <span id="heart-span">♥♥♥♥♥</span>  
+                </div>
+                <div id="input-area">
+                <input type="number" id="user-input" placeholder="1부터 100까지 숫자를 입력"/>
+                <div class="buttons">
+                    <button id="go-button">GO !</button>
+                    <button id="reset-button">RESET</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

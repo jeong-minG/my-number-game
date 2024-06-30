@@ -1,0 +1,197 @@
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0; 
+  background-image: linear-gradient(120deg, rgba(255,225,249,1) 0%, rgba(237,213,250,1) 35%, rgba(234,211,250,1) 38%, rgba(165,163,255,1) 100%);
+  background-size: cover;
+}
+
+.plaid-line{
+    width: 100vw;
+    height: 100vh;
+    position: relative;    
+    background:
+    linear-gradient(to bottom, transparent 38px, rgba(255, 255, 255, 0.521) 38px) 0 0 / 100vw 40px repeat-y,
+    linear-gradient(to right, transparent 38px, rgba(255, 255, 255, 0.521) 38px) 0 0 / 40px 100vh repeat-x;}
+
+
+section > .interface{
+        display:block; overflow: hidden;
+        margin: 0 auto;
+        width:62vw;
+        height:84vh; 
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .top{
+        width:100%; height: 50px;
+        border-bottom: 3px solid black;
+        background-color: #34eac7;
+        display: flex; justify-content: end; align-items: center; column-gap: 10px;
+    }
+
+    .top > p{ text-align: center; font-size: 1.6vw; 
+    }
+
+    .top > p:last-of-type{margin-right: 10px;}
+
+    .main h1{
+        text-align: center;font-family: 'yg-jalnan'; font-size: 4vw; 
+    }
+    #chance-area{text-align: center; font-size: 1.7vw; font-family: 'KCC-Hanbit'; line-height: 3;}
+    #chance-area span{color: blueviolet;}
+
+    #result-area{
+        text-align: center;font-size: 1.9vw; font-family: 'KCC-Hanbit'; line-height: 3;
+    }
+    #input-area{display: flex; align-items: center; row-gap: 15px; width: 100%; flex-direction: column; }
+    #user-input{
+        height:7.2vh; font-size: 1.5vw; width: 55%;box-sizing: border-box;font-family: 'KCC-Hanbit'; text-align: center;
+    }
+    .buttons{width:55%; display: flex; justify-content: space-between; height:7.2vh;}
+
+    .buttons button{
+        font-family: 'MoveSans-Bold'; font-size: 2vw; width:49%; 
+        height: 100%; 
+        border: 2px solid #000; 
+        background-color: #eeeeee;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        display: inline-block; 
+        overflow: hidden;
+      }
+      .buttons button:after {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease; 
+        transform: scale(.1);
+      }
+      .buttons button:hover {
+        color: #fff;
+        background: transparent;
+      }
+      .buttons button:hover:after {
+        background-color: #ffa9cc; 
+        transform: scale(1);
+      }
+
+      @media (max-width: 1750px) { 
+      section > .interface{ 
+              height:80vh;  
+    }
+    } 
+    @media (max-width: 1650px) { 
+      section > .interface{ 
+              height:75vh;  
+    }
+    }    
+    
+    @media (max-width: 1550px) { 
+      section > .interface{ 
+              height:70vh;  
+    }
+    }  
+    @media (max-width: 1450px) { 
+      section > .interface{ 
+              height:65vh;  
+    }#user-input{
+      height:6vh; 
+  }
+  .buttons{ height:6vh;}
+    } 
+    @media (max-width: 1350px) { 
+      section > .interface{ 
+              height:60vh;  
+    }
+    }  
+    @media (max-width: 1100px) { 
+      section > .interface{ 
+              height:55vh;  
+    }
+    }  
+ 
+
+  @media (max-width: 992px) {
+    
+    section > .interface{ 
+      height:50vh;  
+}
+    .main h1{
+      font-size: 3.5vw; 
+  } 
+  .top > p{  font-size: 2.8vw; 
+  }  
+  #chance-area{  font-size: 2.5vw; } 
+  
+  #result-area{ font-size: 2.2vw;  
+  } 
+  #user-input{
+      height:6vh; font-size: 2vw; 
+  }
+  .buttons{  height:6vh;}
+  
+  .buttons button{  font-size: 3vw;  
+  }
+}
+
+
+  @media (max-width: 768px) {
+    section > .interface{ 
+      height:45vh;  
+}
+    .main h1{
+      font-size: 4vw; 
+  }  
+    
+} 
+@media (max-width: 576px) { 
+.top > p{  font-size: 3.5vw; 
+}  
+#chance-area{  font-size: 3.5vw; } 
+
+#result-area{ font-size: 3.2vw;  
+} 
+#user-input{
+    height:5vh; font-size: 2.2vw; 
+}
+.buttons{  height:5vh;}
+
+.buttons button{  font-size: 3.5vw;  
+}
+} 
