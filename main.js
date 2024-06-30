@@ -68,7 +68,7 @@ function play(){
   }
 
   if (gameOver == true){
-  resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`;
+    resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`;
     goButton.disabled = true;
   }
   history.push(userValue);
@@ -77,6 +77,7 @@ function play(){
 
 function reset(){
 userInput.value = "";
+history=[];
 pickRandomNum();
 resultArea.textContent = "5번의 기회 동안 숫자를 맞춰보세요!";
 gameOver = false;
