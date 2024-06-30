@@ -55,8 +55,6 @@ function play(){
   heartSpan.textContent=`0`;
   gameOver = true;
 }
-
-
   
   if (userValue < computerNum) {
     resultArea.textContent = "UP";
@@ -67,8 +65,11 @@ function play(){
     gameOver = true;
   }
 
-  if (gameOver == true){
-    resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`;
+  if (chances == 0){
+    resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`; 
+  }
+
+  if (gameOver == true){ 
     goButton.disabled = true;
   }
   history.push(userValue);
