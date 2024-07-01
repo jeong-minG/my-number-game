@@ -138,6 +138,7 @@ section > .interface{
     }  
 
   @media (max-width: 992px) { 
+    #history-area{font-size: 2.5vw;}
     section > .interface{ 
       height:450px;  
 }
