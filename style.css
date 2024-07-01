@@ -41,8 +41,8 @@ body {
 section > .interface{
         display:block; overflow: hidden;
         margin: 0 auto;
-        width:62vw;
-        height:84vh; 
+        width:1200px;
+        height:800px; 
         position: absolute;
         transform: translate(-50%,-50%);
         top: 50%;
@@ -59,6 +59,7 @@ section > .interface{
         background-color: #34eac7;
         display: flex; justify-content: end; align-items: center; column-gap: 10px;
     }
+    #history-area{padding-right: 20px; }
 
     .top > p{ text-align: center; font-size: 1.6vw; 
     }
@@ -111,51 +112,39 @@ section > .interface{
         transform: scale(1);
       }
 
-      @media (max-width: 1750px) { 
-      section > .interface{ 
-              height:80vh;  
+      #answer-area{text-align: center;}
+ 
+    @media (max-width: 1750px) { 
+      section > .interface{  
+        width:80%;
+        height:700px; 
     }
-    } 
-    @media (max-width: 1650px) { 
-      section > .interface{ 
-              height:75vh;  
-    }
-    }    
-    
-    @media (max-width: 1550px) { 
-      section > .interface{ 
-              height:70vh;  
-    }
-    }  
-    @media (max-width: 1450px) { 
-      section > .interface{ 
-              height:65vh;  
-    }#user-input{
+    #user-input{
       height:6vh; 
   }
   .buttons{ height:6vh;}
     } 
-    @media (max-width: 1350px) { 
-      section > .interface{ 
-              height:60vh;  
-    }
+    @media (max-width: 1450px) { 
+      section > .interface{   
+        height:600px; 
+    } 
     }  
-    @media (max-width: 1100px) { 
-      section > .interface{ 
-              height:55vh;  
-    }
+    @media (max-width: 1250px) { 
+      section > .interface{  
+        height:500px; 
+    } 
+    .top > p{  font-size: 2vw; 
+    } 
     }  
- 
 
-  @media (max-width: 992px) {
-    
+  @media (max-width: 992px) { 
     section > .interface{ 
-      height:50vh;  
+      height:450px;  
 }
     .main h1{
       font-size: 3.5vw; 
   } 
-  .top > p{  font-size: 2.8vw; 
+  .top > p{  font-size: 3vw; 
   }  
   #chance-area{  font-size: 2.5vw; } 
   
@@ -163,17 +152,20 @@ section > .interface{
   } 
   #user-input{
       height:6vh; font-size: 2vw; 
+  } 
+  #user-input{
+    min-height:40px; font-size: 2.2vw; 
   }
-  .buttons{  height:6vh;}
+  .buttons{  min-height:40px;}
   
-  .buttons button{  font-size: 3vw;  
+  .buttons button{  font-size: 3.5vw;  
   }
 }
 
 
   @media (max-width: 768px) {
     section > .interface{ 
-      height:45vh;  
+      height:400px;  
 }
     .main h1{
       font-size: 4vw; 
@@ -181,17 +173,10 @@ section > .interface{
     
 } 
 @media (max-width: 576px) { 
-.top > p{  font-size: 3.5vw; 
+.top > p{  font-size: 4vw; 
 }  
 #chance-area{  font-size: 3.5vw; } 
 
 #result-area{ font-size: 3.2vw;  
 } 
-#user-input{
-    height:5vh; font-size: 2.2vw; 
-}
-.buttons{  height:5vh;}
-
-.buttons button{  font-size: 3.5vw;  
-}
 } 

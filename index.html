@@ -9,7 +9,8 @@
 <body>
     <section class="plaid-line">
         <div class="interface">
-            <div class="top">
+            <div class="top"> 
+            <h2 id="history-area">← 입력했던 숫자들</h2>
                 <p>＝</p>
                 <p>□</p>
                 <p>♥</p>
@@ -18,7 +19,7 @@
                 <h1>NUMBER GUESSING GAME</h1>
                 <div id="result-area">5번의 기회 동안 숫자를 맞춰보세요!</div>
                 <div id="chance-area">남은 기회 : 
-                    <span id="heart-span">♥♥♥♥♥</span>  
+                    <span id="heart-span">♥♥♥</span>  
                 </div>
                 <div id="input-area">
                 <input type="number" id="user-input" placeholder="1부터 100까지 숫자를 입력"/>
@@ -28,6 +29,7 @@
                 </div>
                 </div>
             </div>
+            <p id="answer-area">정답은 여기 ★</p>
         </div>
     </section>
     <script src="main.js"></script>

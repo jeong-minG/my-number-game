@@ -15,7 +15,9 @@ let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
 let chanceArea = document.getElementById("chance-area");
 let heartSpan = document.getElementById("heart-span");
-let chances = 5;
+let answerArea = document.getElementById("answer-area"); 
+let historyArea = document.getElementById("history-area");
+let chances = 3;
 let history=[];
 let gameOver = false; 
 
@@ -26,10 +28,11 @@ userInput.addEventListener("focus",function(){userInput.value = "";});
 function pickRandomNum(){ 
   computerNum = Math.floor(Math.random() * 100) + 1;
   console.log("정답은", computerNum);
+  answerArea.textContent = `정답은 ${computerNum}`;
 };
 
 function play(){
-  let userValue = userInput.value;
+  let userValue = userInput.value; 
 
 
   if(userValue < 1 || userValue > 100){
@@ -41,15 +44,12 @@ function play(){
     resultArea.textContent = "이미 입력한 숫자입니다. 다른 숫자를 입력해주세요";
     return;
   }
+ 
 
   chances--;
-  if(chances == 4){
-  heartSpan.textContent=`♥♥♥♥`;
-} else if(chances == 3){
-  heartSpan.textContent=`♥♥♥`;
-} else if(chances == 2){
+  if(chances == 2){
   heartSpan.textContent=`♥♥`;
-}else if(chances == 1){
+} else if(chances == 1){
   heartSpan.textContent=`♥`;
 }else{
   heartSpan.textContent=`0`;
@@ -74,6 +74,9 @@ function play(){
   }
   history.push(userValue);
 
+  console.log(history);
+  
+  historyArea.textContent = `${history} ← 입력했던 숫자들`;
 };
 
 function reset(){
@@ -81,10 +84,11 @@ userInput.value = "";
 history=[];
 pickRandomNum();
 resultArea.textContent = "5번의 기회 동안 숫자를 맞춰보세요!";
+historyArea.textContent = ` ← 입력했던 숫자들`;
 gameOver = false;
 goButton.disabled = false;
-heartSpan.textContent=`♥♥♥♥♥`;
-chances = 5;
+heartSpan.textContent=`♥♥♥`;
+chances = 3;
 };
 
 pickRandomNum();
