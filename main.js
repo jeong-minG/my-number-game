@@ -66,8 +66,12 @@ function play(){
   }
 
   if (chances == 0){
-    resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`; 
-  }
+    if (userValue == computerNum){
+      resultArea.textContent = "정답입니다";
+    }else{
+      resultArea.textContent = `다음기회에 다시 도전하세요 ㅠㅠ`; 
+      gameOver = true;
+  } }
 
   if (gameOver == true){ 
     goButton.disabled = true;
